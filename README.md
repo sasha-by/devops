@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/achayevich/sas/_apis/build/status/sasha-by.devops?branchName=main)](https://dev.azure.com/achayevich/sas/_build/latest?definitionId=1&branchName=main)
+
 
 # Contributing
 
