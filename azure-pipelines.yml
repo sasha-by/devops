@@ -13,6 +13,11 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  # Azure service connection established during pipeline creation
+  azureSubscription: 'Azure_itw'
+  appName: 'SampleFunctionApp'
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -32,21 +37,6 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-
-variables: 
-  ## Add this under variables section in the pipeline
-  azureSubscription: 'Azure_itw'
-  appName: 'SampleFunctionApp'
-
-trigger:
-- main
-
-variables:
-  # Azure service connection established during pipeline creation
-  azureSubscription: 'Azure_itw'
-  appName: 'SampleFunctionApp'
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
 
 - task: AzureFunctionApp@1 # Add this at the end of your file
   inputs:
