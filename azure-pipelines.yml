@@ -40,7 +40,7 @@ steps:
 
 - task: AzureFunctionApp@1 # Add this at the end of your file
   inputs:
-    azureSubscription: Azure_itw
-    appType: functionAppLinux
-    appName: $(appName)
-    package: $(System.ArtifactsDirectory)/**/*.zip
+    azureSubscription: 'Azure_itw(6f590de7-87c9-4bfd-a02c-69e1f5fa28ff)'
+    appType: 'functionAppLinux'
+    appName: '$(appName)'
+    package: '$(System.ArtifactsDirectory)/**/*.zip'
